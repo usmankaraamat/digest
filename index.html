@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Published from a public repository. This keeps it out of search results; it does
+       not make it private. -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b0f14">
+  <title>Digest</title>
+  <!-- Every path is relative: Pages serves this from a repository subpath, and an
+       absolute "/board.js" resolves to the domain root and 404s. That blanked the
+       sibling project's first deploy. -->
+  <link rel="stylesheet" href="board.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Digest</h1>
+    <p id="checked" class="muted"></p>
+  </header>
+  <nav id="tracks" class="tracks" aria-label="Track"></nav>
+  <div class="bar">
+    <label><input type="checkbox" id="showRejects"> Show rejected</label>
+    <label><input type="checkbox" id="showHidden"> Show hidden</label>
+    <label><input type="checkbox" id="savedOnly"> Saved only</label>
+  </div>
+  <div id="sources" class="sources" aria-label="Sources"></div>
+  <p id="count" class="muted count" role="status"></p>
+  <main id="list" class="list" aria-live="polite"></main>
+  <details id="health" class="health" hidden>
+    <summary>Crawl notes</summary>
+    <ul id="warnings"></ul>
+  </details>
+  <script src="board.js"></script>
+</body>
+</html>
